@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen Adaptativa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        figure {
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        figcaption {
+            font-size: 1em;
+            color: #555;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Actividad 5 -->
+    <section>
+        <figure>
+            <picture>
+                <!-- Imagen para pantallas grandes (1024px o más) -->
+                <source srcset="/img/White1024.jpg" media="(min-width: 1024px)">
+                <!-- Imagen para pantallas medianas (640px a 1023px) -->
+                <source srcset="/img/White640.jpg" media="(min-width: 640px)">
+                <!-- Imagen para pantallas pequeñas (menos de 640px) -->
+                <img src="/img/White640.jpg" alt="Descripción de la imagen" loading="lazy">
+            </picture>
+            <figcaption> Cigüeña blanca (Ciconia ciconia) en vuelo, llevando un trozo de plástico que utilizará para construir el nido.</figcaption>
+        </figure>
+    </section>
+    <br>  
+    <!-- Actividad 6 -->
+    <section>
+      <svg width="200" height="200">
+        <!-- Círculo rojo en el centro -->
+        <circle cx="100" cy="100" r="20" fill="red" />
+        <!-- Rectángulo azul en el centro -->
+        <rect x="50" y="80" width="100" height="40" fill="blue" />
+        <!-- Línea amarilla desde la esquina superior izquierda a la inferior derecha -->
+        <line x1="0" y1="0" x2="200" y2="200" stroke="yellow" stroke-width="2" />
+        <!-- Texto diagonal desde la esquina inferior izquierda a la superior derecha -->
+        <text x="25" y="190" transform="rotate(-45 0,200)" fill="black" font-size="20">
+          Texto en diagonal
+        </text>
+      </svg>
+    </section>
+    <!-- Actividad 7 -->
+    <section>
+      <canvas id="semaforo" width="100" height="300"></canvas>
+    </section>
+    <script src="semaforo.js"></script>
+    <!-- Actividad 8 -->
+    <section>
+      <!-- Video con reproducción automática y sin sonido -->
+      <video controls autoplay muted>
+        <source src="/img/sample2.webm" type="video/webm">
+        <source src="/img/sample2.avi" type="video/avi">
+        Tu navegador no soporta el elemento de video.
+      </video>
+      <!-- Audio con reproducción en bucle -->
+      <audio controls loop>
+        <source src="/img/sample2_audio_128kbps.mp3" type="audio/mpeg">
+        <source src="/img/sample2_audio_128kbps.ogg" type="audio/ogg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    </section>    
+</body>
+</html>
